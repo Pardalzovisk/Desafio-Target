@@ -104,7 +104,7 @@ class Program
             // Percorrer a string e contar as ocorrências de 'a' ou 'A'
             foreach (char c in input)
             {
-                if (c == 'a' || c == 'A')
+                if (c == 'a' || c == 'A' || c == 'á' || c == 'Á' || c == 'à' || c == 'À' || c == 'ã' || c == 'Ã' || c == 'â' || c == 'Â')
                 {
                     contador++;
                 }
@@ -113,7 +113,7 @@ class Program
             // Exibir o resultado
             if (contador > 0)
             {
-                Console.WriteLine($"A letra 'a' (maiúscula ou minúscula) ocorre {contador} vezes na string.");
+                Console.WriteLine($"A letra 'a' (maiúscula, minúscula ou com acentos) ocorre {contador} vezes na string.");
             }
             else
             {
