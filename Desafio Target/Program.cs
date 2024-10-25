@@ -44,9 +44,24 @@ class Program
 
         do
         {
-            // Definir o número a ser verificado
-            Console.Write("Informe um número para verificar se ele pertence à sequência de Fibonacci: ");
-            int numero = int.Parse(Console.ReadLine());
+            int numero;
+
+            // Tenta obter um número do usuário
+            while (true)
+            {
+                Console.Write("Informe um número para verificar se ele pertence à sequência de Fibonacci: ");
+                string entrada = Console.ReadLine();
+
+                // Tenta converter a entrada em um número inteiro
+                if (int.TryParse(entrada, out numero))
+                {
+                    break; // Sai do loop se a conversão for bem-sucedida
+                }
+                else
+                {
+                    Console.WriteLine("Entrada inválida! Por favor, insira um número válido.");
+                }
+            }
 
             // Variáveis iniciais da sequência de Fibonacci
             int a = 0;
